@@ -1,4 +1,5 @@
 FROM jenkins/jenkins:2.479.1-jdk17
+ENV JENKINS_OPTS --httpPort=$PORT
 USER root
 RUN apt-get update && apt-get install -y lsb-release
 RUN curl -fsSLo /usr/share/keyrings/docker-archive-keyring.asc \
